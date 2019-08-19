@@ -1,0 +1,42 @@
+{
+  "name": "g6v2-plugin-layout-dagre",
+  "version": "1.0.0",
+  "description": "dagre layout plugin, based on g6 v2",
+  "main": "build/plugin.layout.dagre.js",
+  "scripts": {
+    "build": "webpack",
+    "build-lib": "babel src --out-dir lib",
+    "test": "torch --compile --renderer ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wxy1995/g6v2-plugin-layout-dagre.git"
+  },
+  "author": {
+    "name": "xinyu wang",
+    "email": "travel2wxy@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wxy1995/g6v2-plugin-layout-dagre/issues"
+  },
+  "keywords": [
+    "g6",
+    "dagre"
+  ],
+  "homepage": "https://github.com/wxy1995/g6v2-plugin-layout-dagre#readme",
+  "devDependencies": {
+    "g6v2": "2.2.8",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-remove-strict-mode": "~0.0.2",
+    "webpack": "~4.10.2",
+    "webpack-cli": "~3.0.0"
+  },
+  "dependencies": {
+    "dagre": "~0.8.2"
+  }
+}

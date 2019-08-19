@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>插件-布局-Dagre</title>
+</head>
+
+<body>
+  <div id="mountNode"></div>
+  <script src="./data.js"></script>
+  <!-- <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-2.2.6/build/g6.js"></script> -->
+  <script src="./g6.js"></script>
+  <script src="../build/plugin.layout.dagre.js"></script>
+  <script>
+    const graph = new G6.Graph({
+      container: 'mountNode',
+      fitView: 'cc',
+      width: document.getElementById('mountNode').clientWidth,
+      height: 500,
+      plugins: [new G6.Plugins['layout.dagre']({
+        compound: true,
+        multigraph: true
+      })],
+    });
+
+    data.edges.forEach(edge => {
+      edge.style = {
+        endArrow: true
+      };
+    });
+
+    graph.read(data);
+  </script>
+</body>
+</html>
