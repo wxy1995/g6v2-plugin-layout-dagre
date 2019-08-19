@@ -5,8 +5,7 @@
   "main": "build/plugin.layout.dagre.js",
   "scripts": {
     "build": "webpack",
-    "build-lib": "babel src --out-dir lib",
-    "test": "torch --compile --renderer ./test"
+    "build-lib": "babel src --out-dir lib"
   },
   "repository": {
     "type": "git",

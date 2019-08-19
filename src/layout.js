@@ -81,8 +81,6 @@ class Layout {
         edges[i].controlPoints = edge.points.slice(1, edge.points.length - 1);
       }
     });
-    this.graph.updateNodePosition();
-    this.graph.emit('afterlayout');
     callback && callback();
   }
 }
